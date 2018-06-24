@@ -1,4 +1,5 @@
-﻿using Microsoft.Owin;
+﻿using BingoOnline.Cards;
+using Microsoft.Owin;
 using Owin;
 
 [assembly: OwinStartupAttribute(typeof(BingoOnline.Startup))]
