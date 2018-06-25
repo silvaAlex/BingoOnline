@@ -19,7 +19,6 @@ namespace BingoOnline.Models
         public bool Status { get; set; }
         [MaxLength(100)]
         [Display(Name = "Descrição")]
-        [Index("Bingo_Description_Index",IsUnique = true)]
         public string Description { get; set; }
  
         [Required, ForeignKey("Award")]

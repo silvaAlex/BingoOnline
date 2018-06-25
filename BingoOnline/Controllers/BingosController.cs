@@ -64,24 +64,9 @@ namespace BingoOnline.Controllers
                     dbContext.Cards.Add(card);
                     dbContext.SaveChanges();
                 }
-                try
-                {
+        
                     dbContext.SaveChanges();
                     return RedirectToAction("Index");
-                }
-                catch (Exception ex)
-                {
-                    if (ex.InnerException != null
-                        && ex.InnerException.InnerException != null
-                        && ex.InnerException.InnerException.Message.Contains("_Index"))
-                    {
-                        ModelState.AddModelError(string.Empty, "Não foi possível inserir dois bingos com mesmo nome");
-                    }
-                    else
-                        ModelState.AddModelError(string.Empty, ex.Message);
-
-                    return View(bingo);
-                }
             }
 
             ViewBag.AwardsID = new SelectList(dbContext.Awards, "AwardsID", "Name", bingo.AwardsID);
@@ -115,24 +100,6 @@ namespace BingoOnline.Controllers
             if (ModelState.IsValid)
             {
                 dbContext.Entry(bingo).State = EntityState.Modified;
-                try
-                {
-                    dbContext.SaveChanges();
-                    return RedirectToAction("Index");
-                }
-                catch (Exception ex)
-                {
-                    if (ex.InnerException != null
-                        && ex.InnerException.InnerException != null
-                        && ex.InnerException.InnerException.Message.Contains("_Index"))
-                    {
-                        ModelState.AddModelError(string.Empty, "Não foi possível Editar já existe um bingo com esse nome");
-                    }
-                    else
-                        ModelState.AddModelError(string.Empty, ex.Message);
-
-                    return View(bingo);
-                }
             }
             ViewBag.AwardsID = new SelectList(dbContext.Awards, "AwardsID", "Name", bingo.AwardsID);
             return View(bingo);
@@ -162,6 +129,26 @@ namespace BingoOnline.Controllers
             dbContext.Bingos.Remove(bingo);
             dbContext.SaveChanges();
             return RedirectToAction("Index");
+        }
+
+        public ActionResult Raffle([Bind(Include = "BingoID")] Bingo bingo)
+        {
+            if (ModelState.IsValid)
+            {
+                dbContext.Entry(bingo).State = EntityState.Modified;
+            }
+
+            var query = (from c in dbContext.Cards
+                         select c).ToList();
+
+            RaffleCards raffleCards = new RaffleCards();
+            foreach (Card card in query)
+            {
+                
+                ViewBag.RaffleNumbers = raffleCards.CheckCardHits(card);
+            }
+
+            return View(bingo);
         }
 
         protected override void Dispose(bool disposing)

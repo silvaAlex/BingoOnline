@@ -9,26 +9,26 @@ namespace BingoOnline.Utils
     public static class Randomizer
     {
 
-        static Random sortedRandom;
-        static ArrayList sortedNumbers;
+        static Random raffleRandom;
+        static ArrayList raffleNumbers;
 
         static Randomizer()
         {
-            sortedRandom = new Random();
-            sortedNumbers = new ArrayList();
+            raffleRandom = new Random();
+            raffleNumbers = new ArrayList();
         }
 
         public static int Random()
         {
-            int value = sortedRandom.Next(2, 101);
+            int value = raffleRandom.Next(2, 101);
             while (true)
             {
-                if (!sortedNumbers.Contains(value))
+                if (!raffleNumbers.Contains(value))
                 {
-                    sortedNumbers.Add(value);
+                    raffleNumbers.Add(value);
                     return value;
                 }
-                value = sortedRandom.Next(2, 101);
+                value = raffleRandom.Next(2, 101);
             }
         }
     }

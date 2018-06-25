@@ -18,7 +18,5 @@ namespace BingoOnline.Models
         public DbSet<Award> Awards { get; set; }
 
         public DbSet<Card> Cards { get; set; }
-
-        public System.Data.Entity.DbSet<BingoOnline.Models.BingoSorted> BingoSorteds { get; set; }
     }
 }

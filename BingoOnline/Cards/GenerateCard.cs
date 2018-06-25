@@ -14,15 +14,14 @@ namespace BingoOnline.Cards
     {
         public string CreateSortedNumbers()
         {
-            string sortedList = "";
-            List<int> sortedNumbers = Enumerable.Range(1, 15).Select(x => x = Randomizer.Random()).ToList();
+            string raffleNumberList = "";
+            List<int> raffleNumbers = Enumerable.Range(1, 15).Select(x => x = Randomizer.Random()).ToList();
 
-            foreach (int sorted in sortedNumbers)
-            {
-                sortedList += sorted.ToString() + ",";
-            }
 
-            return sortedList;
+            raffleNumberList += string.Join(",", raffleNumbers);
+
+
+            return raffleNumberList;
         }
     }
 }

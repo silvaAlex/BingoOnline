@@ -12,7 +12,7 @@ namespace BingoOnline.Models
         [Key]
         public int CardID { get; set; }
         public string CardValues { get; set; }
-        public int CardHits { get; set; }
+        public virtual int CardHits { get; set; }
         public virtual int BingoID { get; set; }
     } 
 }

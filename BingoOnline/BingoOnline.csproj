@@ -26,6 +26,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -53,6 +54,8 @@
     <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
     </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -205,6 +208,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Cards\GenerateCard.cs" />
+    <Compile Include="Cards\RaffleCards.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AwardsController.cs" />
     <Compile Include="Controllers\BingosController.cs" />
@@ -214,14 +218,14 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Controllers\Models\AccountViewModels.cs" />
-    <Compile Include="Controllers\Models\Award.cs" />
-    <Compile Include="Controllers\Models\Bingo.cs" />
-    <Compile Include="Controllers\Models\Card.cs" />
-    <Compile Include="Controllers\Models\DataContext.cs" />
-    <Compile Include="Controllers\Models\IdentityModels.cs" />
-    <Compile Include="Controllers\Models\ManageViewModels.cs" />
-    <Compile Include="Controllers\Models\Player.cs" />
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Award.cs" />
+    <Compile Include="Models\Bingo.cs" />
+    <Compile Include="Models\Card.cs" />
+    <Compile Include="Models\DataContext.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Player.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Utils\Randomizer.cs" />
@@ -295,7 +299,7 @@
     <Content Include="Views\Bingos\Details.cshtml" />
     <Content Include="Views\Bingos\Edit.cshtml" />
     <Content Include="Views\Bingos\Index.cshtml" />
-    <Content Include="Views\BingoSorteds\Index.cshtml" />
+    <Content Include="Views\Bingos\Raffle.cshtml" />
     <None Include="XMLSchema1.xsd">
       <SubType>Designer</SubType>
     </None>
