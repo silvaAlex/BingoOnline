@@ -19,13 +19,13 @@ namespace BingoOnline.Cards
         {
             Action toRepeat = () =>
             {
-
+                card.CardHits = AddCardHit(card);
+                Save(card, card.CardHits);
             };
 
             var query = (from c in GetAll()
                          where c.CardID == card.CardID && c.CardHits <= 15
                          select c.CardHits).FirstOrDefault();
-
 
             Enumerable.Repeat(toRepeat, 15);
 
