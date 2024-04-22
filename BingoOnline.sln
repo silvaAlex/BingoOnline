@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27703.2035
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34622.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BingoOnline", "BingoOnline\BingoOnline.csproj", "{5B14D0C0-A867-4661-92B3-FDE396B91718}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BingoOnline.API", "BingoOnline.API\BingoOnline.API.csproj", "{CCA5C446-DD61-433C-B14A-306A512394F7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BingoOnline.Application", "BingoOnline.Application\BingoOnline.Application.csproj", "{ADF6AB54-95A6-40C0-9146-291B0ADBA67A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BingoOnline.Domain", "BingoOnline.Domain\BingoOnline.Domain.csproj", "{F53F79FA-E70B-430E-8F1B-0F98996F5AC8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +15,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{5B14D0C0-A867-4661-92B3-FDE396B91718}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5B14D0C0-A867-4661-92B3-FDE396B91718}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5B14D0C0-A867-4661-92B3-FDE396B91718}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5B14D0C0-A867-4661-92B3-FDE396B91718}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCA5C446-DD61-433C-B14A-306A512394F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCA5C446-DD61-433C-B14A-306A512394F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCA5C446-DD61-433C-B14A-306A512394F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCA5C446-DD61-433C-B14A-306A512394F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADF6AB54-95A6-40C0-9146-291B0ADBA67A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADF6AB54-95A6-40C0-9146-291B0ADBA67A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADF6AB54-95A6-40C0-9146-291B0ADBA67A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADF6AB54-95A6-40C0-9146-291B0ADBA67A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F53F79FA-E70B-430E-8F1B-0F98996F5AC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F53F79FA-E70B-430E-8F1B-0F98996F5AC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F53F79FA-E70B-430E-8F1B-0F98996F5AC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F53F79FA-E70B-430E-8F1B-0F98996F5AC8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
