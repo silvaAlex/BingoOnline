@@ -1,6 +1,6 @@
 ﻿using BingoOnline.Domain.Models;
 
-namespace BingoOnline.Application.Repository
+namespace BingoOnline.Domain.Repository
 {
     public interface IBingoRepository
     {
@@ -8,6 +8,6 @@ namespace BingoOnline.Application.Repository
         Task<Bingo> GetById(Guid id);
         Task<Bingo> Add(Bingo entity);
         Task<Bingo> Update(Bingo entity);
-        Task<Bingo> DeleteById(Guid id);
+        Task<Bingo> Delete(Guid id);
     }
 }

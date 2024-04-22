@@ -1,6 +1,6 @@
 ﻿using BingoOnline.Domain.Models;
 
-namespace BingoOnline.Application.Repository
+namespace BingoOnline.Domain.Repository
 {
     public interface IUserRepository
     {
