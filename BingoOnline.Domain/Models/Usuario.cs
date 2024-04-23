@@ -2,23 +2,25 @@
 {
     public class Usuario
     {
-        public Guid UserId { get; }
+        public Guid UsuarioId { get; }
         public string UserName { get; } = string.Empty;
         public string Email { get; } = string.Empty;
+        public string Password { get; } = string.Empty;
 
-        public virtual ICollection<Bingo> Bingos { get; }
+        public virtual ICollection<Cartela> Cartelas { get; }
 
-        public Usuario(string name, string email)
+        public Usuario(string name, string email, string password)
         {
-            UserId = Guid.NewGuid();
+            UsuarioId = Guid.NewGuid();
             UserName = name;
             Email = email;
-            Bingos = new List<Bingo>();
+            Password = password;
+            Cartelas = new List<Cartela>();
         }
 
-        public void AddBingo(Bingo bingo)
+        public void AddCartela(Cartela cartela)
         {
-            Bingos.Add(bingo);
+            Cartelas.Add(cartela);
         }
     }
 }
