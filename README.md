@@ -16,7 +16,7 @@ O projeto deverá possibilitar ao administrador o cadastramento de bingos e cart
  - [ ] Criar/Atualizar/Deletar/Buscar um usuário ou mais usuários
  - [x] Criar um algoritmo que gere 100 cartelas para o bingo;
     - [x] Adicionar a cartela a único usuário 
-     -[ ] verificar se ela é única
+        - [ ] verificar se ela é única
  - [ ] Criar uma listagem dos bingos cadastrados;
  - [ ] Criar uma lista de prêmios que deve ser vinculado ao bingo na hora do cadastramento.
  - [ ] Permitir que administrador do bingo possa gerar o sorteio na data do premio
