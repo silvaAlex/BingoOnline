@@ -10,18 +10,16 @@ Este projeto consiste na criação de um sistema simples do tipo "Bingo Online".
 
 O projeto deverá possibilitar ao administrador o cadastramento de bingos e cartelas que serão criadas de formas automáticas pelo sistema.
 
-O Bingo Online é um jogo onde cartelas, com 15 números cada uma, são criadas para os jogadores. São criadas várias cartelas das quais a combinação de quinze números é única.
-
-O bingo só termina quando há um ou mais ganhadores com 15 acertos. No banco de dados deve haver uma forma de gravar os vencedores de cada Bingo.
-
-O sistema deverá possuir um algoritmo que fará os sorteios dos números do Bingo e verificará entre as cartelas, quais acertaram os números e registrar a quantidade de acertos daquela cartela.
-
 ## Sistema
 
 - O sistema deverá possuir:
+ - [ ] Criar/Atualizar/Deletar/Buscar um usuário ou mais usuários
  - [ ] Criar um algoritmo que gere 100 cartelas para o bingo;
- - [ ] Criar um algoritmo que faça o sorteio dos números, cheque quais cartelas acertaram e registra a quantidade de acertos;
-
+    - [ ] Adicionar a cartela a único usuário e verificar se ela é única
  - [ ] Criar uma listagem dos bingos cadastrados;
  - [ ] Criar uma lista de prêmios que deve ser vinculado ao bingo na hora do cadastramento.
+ - [ ] Permitir que administrador do bingo possa gerar o sorteio na data do premio
+    - [ ] deverá listar todos os números sorteados
+    - [ ] O bingo só termina quando há um ou mais ganhadores com 15 acertos
+        - [ ] No banco de dados deve haver uma forma de gravar os vencedores de cada Bingo.
 
